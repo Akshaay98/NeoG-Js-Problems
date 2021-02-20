@@ -1,0 +1,118 @@
+1)Fizzbuzz - Write a program to return an array from 1 to 100. But for every multiple of 3, replace the number with "Fizz", for every multiple of 5, replace the number 
+with "Buzz" and for every multiples of 3 & 5, replace with "FizzBuzz".
+        const fizzBuzz = () => {
+          let result = []
+          for (i = 1; i <= 100;i++)
+          {
+            if (i % 3 == 0 && i%5==0)
+            {
+              result.push("FizzBuzz")
+            }
+            else if (i % 5 == 0)
+            {
+              result.push("Buzz")
+            } 
+            else if (i % 3 == 0)
+            {
+              result.push("Fizz")
+            } 
+            else
+            {
+              result.push(i)
+              }
+          }
+          return result
+        }
+        console.log(fizzBuzz());
+
+2) Print the following star pattern :-
+*
+* *
+* * *
+* * * *
+* * * * *
+
+            const pattern = () => {
+        let result = ""
+        for (i = 0; i < 5; i++)
+        {
+          for (j = 0; j <= i; j++)
+          {
+            result=result+"*"
+          }
+          result=result+"\n"
+        }
+        return result
+
+      }
+      console.log(pattern());
+      
+3) Write a program to take a number input from user and print multiplication table 12 times for that number.  
+
+        const multiplicationTable = (num) => {
+          let result = ""
+          for (i = 1; i <=12; i++)
+          {
+           console.log(`${num}x${i}=${num*i}`);
+          } 
+        }
+        console.log(multiplicationTable(5));
+   
+ 4) Write a program to return a Fibonacci series : 0,1,1,2,3,5,8,13,21....
+           const fibi = (n) => {
+              let first = 0;
+              let second = 1
+              for (i = 0; i <= n; i++)
+              {
+                  console.log(left);
+                  third = left + right
+                  n1 = n2;
+                  n2 = third;
+
+                  }
+          }
+          console.log(fibi(10));
+ 5) Write a program to take an input from a user and find its Factorial. Example: Factorial of 5 is 120
+ 
+       const Factorial = (n) => {
+          let fact =1
+          for (i = 1; i <= n; i++)
+          {
+              fact=fact*i
+          }
+         return fact
+
+      }
+      console.log(Factorial(5));
+6)Write a Program to take a number input from user and find if the number is Prime or not.
+
+        const primeNum = (num) => {
+            if (num == 1) return false
+            for (i = 2; i < num; i++)
+            {
+                if (num % i == 0)
+                {
+                    return false
+                    }
+            }
+            return true
+
+        }
+        console.log(primeNum(2));
+ 
+ 7)Write a program to take a day as an input and determine whether it is a weekday or weekend. Example: Tuesday is weekday.
+       const weekDat = (day) => {
+      switch (day) {
+          case "saturday":
+              return "weekEnd"
+          case "sunday":
+              return "weekEnd"
+
+          default:
+              return "WeekDay"
+      }
+
+      }
+      console.log(weekDat("saturday"));
+      
+
