@@ -3,3 +3,88 @@
           return a+b+c+d+e
         }
         console.log(addFiveNum(5, 13, 7, 21, 48));
+        
+2) Write a program to take a number input from user and determine whether the number is odd or even.
+                const oddEven = (num) => {
+                  return (num%2==0)?"even":"odd"
+                }
+                console.log(oddEven(2));
+3) Write a program to find the maximum and minimum out of two given numbers. The numbers are num1=129 and num2=251.
+const maxMin = (a, b) => {
+                  if (a > b)
+                  {
+                    return `max=${a},min=${b}`
+                  }
+                  return `max=${b},min=${a}`
+
+                }
+                console.log(maxMin(555,2));
+4)Write a program to find the maximum out of three given numbers. The numbers are num1=8, num2=23 and num3=17.
+                const maxMin = (a, b,c) => {
+                  if (a > b && a>c)
+                  {
+                    return `max=${a}`
+                  }
+                  else if(b > a && b>c)
+                    return `max=${b}`
+                  else
+                  {
+                   return  `max=${c}`
+                    }
+
+                }
+                console.log(maxMin(8,1,17));
+                
+5)Write a program to find the minimum out of three given numbers. The numbers are num1=35, num2=29 and num3=46.
+                const min = (a, b,c) => {
+                  if (a < b && a<c)
+                  {
+                    return `min=${a}`
+                  }
+                  else if(b< a && b<c)
+                    return `min=${b}`
+                  else
+                  {
+                   return  `min=${c}`
+                    }
+
+                }
+                console.log(min(35,29,46));
+                
+                
+5)Write program to take a month as an input from the user and find out whether the month has 31 days or not.
+                const daysInAMonth = (month) => {
+
+                  if (month.toLowerCase() == "january"||month.toLowerCase() == "march"||month.toLowerCase() == "may" ||month.toLowerCase() ==  "july" || month.toLowerCase() == "august" || month.toLowerCase() == "october" ||month.toLowerCase() ==  "december")
+                  {
+                    return 31
+                    }
+                  else if(month.toLowerCase() == "february")
+                  {
+                    return 28
+                  }
+                  else
+                  {
+                    return 30
+                    }
+                }
+                console.log(daysInAMonth("may"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
