@@ -4,7 +4,7 @@ Input: power(2,3) ––> Output: 8
 const ab = (a, b) => {
         let power = 1;
         for (i = 1; i <= b; i++) {
-          power = power * a;
+          power = power * a
         }
         return power;
       };
