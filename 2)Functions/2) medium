@@ -76,9 +76,29 @@ Input: charAt("neoGcamp", 4) ––> Output: c
         };
         console.log(charAt("neoGcamp", 4))
         
-5)Given two dates, your function should return which one comes before the other.
+6)Given two dates, your function should return which one comes before the other.
 Example:
 Input: minDate('02/05/2021', '24/01/2021') ––> Output: 24/01/2021
+const minDate = (date1, date2) => {
+    let newDate1 = date1.split("/")
+    let newDate2 = date2.split("/")
+    
+    if (parseInt(newDate1[newDate1.length-1]) < parseInt(newDate2[newDate2.length-1]))
+        {
+        return date1
+    }
+    else if (parseInt(newDate1[newDate1.length - 2]) < parseInt(newDate2[newDate2.length - 2]))
+    {
+        return date1
+    }
+    else if (parseInt(newDate1[1]) == parseInt(newDate2[1]) && parseInt(newDate1[0]) < parseInt(newDate2[0]))
+        {
+        return date1
+    }
+    return date2
+    
+}
+console.log(minDate('02/05/2021', '24/05/2021'));
 
 
 
