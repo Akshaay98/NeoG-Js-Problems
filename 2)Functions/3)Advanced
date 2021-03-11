@@ -19,7 +19,28 @@ Solution:- const toSentenceCase = (nums) => {
             }
             console.log(toSentenceCase('we are neoGrammers') );
 
-Given an array of numbers, your function should return an array in the ascending order.
+3)Given an array of numbers, your function should return an array in the ascending order.
 Example:
 Input: sortArray([100,83,32,9,45,61]) ––> Output: [9,32,45,61,83,100]
-solution:- 
+solution:- const sortArray = nums => {
+           for (i = 0; i < nums.length; i++)
+           {
+               for (j = i; j < nums.length; j++)
+               {
+                   if (nums[i] > nums[j])
+                   {
+                       [nums[i],nums[j]]=[nums[j],nums[i]]
+                       }
+                   }
+           }
+           return nums
+       }
+       console.log(sortArray([100, 83, 32, 9, 45, 61]));
+  4)     Given a sentence, your function should reverse the order of characters in each word, keeping same sequence of words.
+Example:
+Input: reverseCharactersOfWord('we are neoGrammers') –––> Output: ew era sremmarGoen
+       
+   solution : const reverseCharactersOfWord = nums => {
+       return nums.split(" ").map((ele)=>ele.split("").reverse().join(""))
+   }
+   console.log(reverseCharactersOfWord('we are neoGrammers'));       
