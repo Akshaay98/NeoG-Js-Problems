@@ -1,0 +1,85 @@
+1)Write a program to input 2 numbers and display the sum of the numbers to the console.
+Solution :- 
+        const sum = (num1, num2) => {
+            return num1+num2
+        }
+        console.log(sum(43, 56));
+  
+2)Write a JavaScript program to calculate the simple interest given P,R,T with the given formula. Formula: SI = (P * T * R) / 100 Where: P = principal amount T = time R = rate SI = simple interest  
+solution:- 
+        const calculateSI = (p,t,r) => {
+            return (p*t*r)/100
+        }
+        console.log(calculateSI(100,6,2));
+        
+3)Write a program to calculate the kinetic energy of a body with mass 'm' and volume 'v'.
+solution:-
+        const calculateKE = (t) => {
+            return (9*(t/5))/32
+        }
+        console.log(calculateKE(56));
+
+11)Write a Program to cyclically Rotate a Number by X positions in the left direction, as provided by the user.
+solution :-
+const rotate = (nums,target) => {
+
+    while (target)
+    {
+      nums.unshift(nums.pop())
+        target--
+    }
+    return nums
+ 
+}
+console.log(rotate([1,2,3,4],2));
+
+9)solution:-Write a JavaScript program to compute the sum of all digits that occur in a given string.
+          const rotate = (nums) => {
+
+              let sum = 0;
+              while (nums)
+              {
+                  sum = sum + (nums % 10)
+                  nums=Math.floor(nums/10)
+              }
+              return sum
+
+          }
+          console.log(rotate(1234));
+          
+          const rotate = (nums) => {
+    
+
+    let sum = nums +  ""
+    return sum.split("").reduce((acc,ele)=>parseInt(acc)+ parseInt(ele))
+    
+ 
+}
+console.log(rotate(1234));
+
+10)Write a JavaScript program that reverses a number.
+solution :-
+                const rotate = (nums) => {
+
+                    let sum = []
+                    while (nums)
+                    {
+
+                        sum.push(nums % 10)
+                        nums=Math.floor(nums/10)
+                    }
+                    return sum
+
+                }
+                console.log(rotate(1234));
+
+                const rotate = (nums) => {
+
+
+                    let num = nums + ""
+
+                    return num.split("").reverse().join("")
+
+
+                }
+                console.log(rotate(1234));
