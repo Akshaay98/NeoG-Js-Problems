@@ -59,19 +59,20 @@ with "Buzz" and for every multiples of 3 & 5, replace with "FizzBuzz".
         console.log(multiplicationTable(5));
    
  4) Write a program to return a Fibonacci series : 0,1,1,2,3,5,8,13,21....
-           const fibi = (n) => {
-              let first = 0;
-              let second = 1
-              for (i = 0; i <= n; i++)
-              {
-                  console.log(left);
-                  third = left + right
-                  n1 = n2;
-                  n2 = third;
-
-                  }
-          }
-          console.log(fibi(10));
+         const test = (num) => {
+    let sum=0
+    let first = 0; let second = 1
+    while (num) {
+        console.log(first);
+        sum = first + second;
+        
+        first = second;
+        second = sum
+     num--
+    }
+   
+}
+console.log(test(25));
  5) Write a program to take an input from a user and find its Factorial. Example: Factorial of 5 is 120
  
        const Factorial = (n) => {
