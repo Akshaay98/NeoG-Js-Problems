@@ -146,14 +146,4 @@ Solution:
           function getAllSubstrings(str) {
              return str.replace(/\s/g,'').split("").map((ele,ind)=>ind<4?ele.toUpperCase():ele).join("")
           }
-            console.log(getAllSubstrings("tic tac toe is a fun game" ));
-            
-            
-
-
-
- 
- 
-        
-        
-
+            console.log(getAllSubstrings("tic tac toe is a fun game" ))
