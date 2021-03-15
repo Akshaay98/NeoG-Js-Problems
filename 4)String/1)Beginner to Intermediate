@@ -33,7 +33,127 @@ Solution:
           
 7)A program that reads three strings and prints the longest and smallest one
 Solution:-
+          const StringToUpperCase = (a, b, c) => {
+            let map = new Map();
+            let array = new Array(a, b, c);
+            for (num of array) {
+              map.set(num, num.length);
+            }
+            let max = -Infinity;
+              let min = Infinity;
+              let largestString
+              let smallestString
+            console.log(map);
+            for (let [key, value] of map) {
+              if (value > max) {
+                  max = value;
+                  largestString=key
+              }
+              if (value < min) {
+                  min = value;
+                  smallestString=key
+              }
+              }
+              console.log(smallestString,largestString);
+
+          };
+          console.log(StringToUpperCase("99aaa", "aa", "ccc"));
+
+8)A program that counts number of vowels and consonants in a String?
+Solution:
+          const StringToUpperCase = (s) => {
+              let vowel = 0
+              let constant=0
+              let test = s.split("").map((ele) => (/^[aeiou]$/i).test(ele)?vowel=vowel+1:"")
+              let test2 = s.split("").map((ele) => (/^[aeiou]$/i).test(ele)?"":constant=constant+1)
+              return [vowel,constant]
+          }
+          console.log(StringToUpperCase("akshay"));
+
+9)Write a program which receives a string str that calculates the length of a string and return true if the length is greater than 7 without using strlen()
+Solution:-
+          const StringToUpperCase = (s) => {   
+          return s.length>7
+          }
+          console.log(StringToUpperCase("akshay"));
+
+10)Write a program that takes two strings and copies smaller string into bigger string
+Solution:
+          const StringToUpperCase = (s1,s2) => {   
+              if (s1.lenghth > s2.lenghth)
+              {
+                  return s2=s1
+              }
+              else return s1=s2
+          }
+          console.log(StringToUpperCase("a","aksh"));
          
+11)Given a string, determine if it is a palindrome, considering only alphanumeric characters
+Solution:-
+                    const StringToUpperCase = (s1) => {   
+                        let newArray = s1.split("")
+                        let i = 0;
+                        let j=newArray.length-1
+                        while (i <= j)
+                        {
+
+                            if (newArray[i] !== newArray[j])
+                            {
+                                return "Not an Plalindrome"
+                            }
+                            else {
+                                i++;
+                                j--
+                            }
+
+                        }
+                        return "Palindrome"
+                    }
+                    console.log(StringToUpperCase("aaaaqaa"));
+
+12)For a given input string(str), write a function to print all the possible substrings.Without using substr method
+ Solution:-
+                     function getAllSubstrings(str) {
+                        var i, j, result = [];
+
+                        for (i = 0; i < str.length; i++) {
+                            for (j = i + 1; j < str.length + 1; j++) {
+                                result.push(str.slice(i, j));
+                            }
+                        }
+                        return result;
+                      }
+
+                      var theString = 'abcd';
+                      console.log(getAllSubstrings(theString));
+
+13)Write a program that removes the time from the given date string "Wed April 15, 7pm". It should return only the date without the time.
+Solution:
+                    function getAllSubstrings(str) {
+                        return str.split(" ").slice(0,3)
+                    }
+                      console.log(getAllSubstrings("Wed April 15, 7pm"));
+                      
+14)Write a program that masks all but last four characters of the string "5565534276455423" to '#'
+Solution:
+          function getAllSubstrings(str) {
+             return str.split("").map((ele,index)=>index<str.length-4?"#":ele).join("")
+          }
+            console.log(getAllSubstrings("5565534276455423"));
+        
+15)Given a string "tic tac toe is a fun game" convert the first 6 characters to capital case
+Solution:
+          function getAllSubstrings(str) {
+             return str.replace(/\s/g,'').split("").map((ele,ind)=>ind<4?ele.toUpperCase():ele).join("")
+          }
+            console.log(getAllSubstrings("tic tac toe is a fun game" ));
+            
+            
+
+
+
+ 
+ 
         
         
 
