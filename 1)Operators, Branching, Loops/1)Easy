@@ -1,7 +1,7 @@
 1) Write a program to add 5 numbers. The value of numbers are num1=5, num2=13, num3=7, num4=21 and num5=48.
 ```
-function test() {
-  console.log("notice the blank line before this function?");
+function sumOfFiveNum(a,b,c,d,e) {
+  return a+b+c+d+e
 }
 ```
 
