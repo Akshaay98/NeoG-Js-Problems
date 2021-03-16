@@ -1,4 +1,6 @@
-1)Given an array of objects of student's marks:
+1) 
+
+Given an array of objects of student's marks:
 Print the name and total marks of each student.
 Print the name of student whose total marks is highest.
 Print the name of student whose total marks is lowest.
@@ -64,6 +66,7 @@ Solution :-
               }
             })
             };
+	    
             const objects = (nums) => {
               return nums.map((ele) =>({ name:ele.name,totalMarks:ele.maths+ele.science+ele.english+ele.computer}))
             }
@@ -71,7 +74,6 @@ Solution :-
            
 2)           const objects = (nums) => {
             let totalMarks = nums.map((ele) => ({ name: ele.name, totalMarks: ele.maths + ele.science + ele.english + ele.computer }))
-            console.log(totalMarks);
             let min = Infinity
             let result
             for (i = 0; i < totalMarks.length; i++){
@@ -81,7 +83,56 @@ Solution :-
               }
             }
             return result
-          }      
+          }    
+	  
     
-3)    
+3)       const objects = (nums) => {
+	 return (nums.map((ele)=>ele.computer).reduce((acc,ele)=>acc+ele))/2
+	};
+	console.log(objects(studentDetails));
+	
+	 const objects = (nums) => {
+         return (nums.reduce((acc,ele)=>acc+ele.computer,0))/2
+         };
+         console.log(objects(studentDetails));
+
+	
+4)	
+		// helper function
+		   const grad = (totalMarks) => {
+		  if (totalMarks >= 75) {
+		    return"A"
+		  }
+		  else if (totalMarks < 75 && totalMarks >= 60) {
+		    return"B"
+		  }
+		  else if (totalMarks < 60 && totalMarks >= 35) {
+		    return"C"
+		  }
+		  else if (totalMarks < 35) {
+		    return"D"
+		  }
+		}
+		// actual code
+		const objects = (nums) => {
+		  return nums.map((ele) => ({ name: ele.name, totalMarks: ((ele.maths + ele.science + ele.english + ele.computer) / 400) * 100 }))
+		    .map((ele) => {
+		      return {
+			...ele,
+			grade:grad(ele.totalMarks)
+		    }
+		  })
+		};
+		console.log(objects(studentDetails));
+
+5)   
+		// actual code
+		const objects = (nums) => {
+		  result = nums.map((ele) => ({ name: ele.name, totalMarks: ((ele.maths + ele.science + ele.english + ele.computer) / 400) * 100 })).filter((ele) => ele.totalMarks > 35)
+		  console.log(result);
+		  console.log(result.length);
+
+		};
+		console.log(objects(studentDetails));
+
 
