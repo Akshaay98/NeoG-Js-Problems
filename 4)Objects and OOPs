@@ -134,5 +134,61 @@ Solution :-
 
 		};
 		console.log(objects(studentDetails));
+		
+
+==>2) Salary calculation using OOPS concept.
+Create a Class using ES6 in JavaScript named Employee and assign necessary
+data members and methods such as name, id, basic salary, HRA, Allowances; define getSalary method which will return the net salary.
+Create two Instances of Employee with all necessary details.
+Call the getSalary method of each instance and return the net salary based on your computation.
+Solution:
+
+		class Employese{
+		  constructor(name, id, basicSalary, HRA, allowance) {
+		    this.name = name;
+		    this.id = id;
+		    this.basicSalary = basicSalary;
+		    this.HRA = HRA;
+		    this.allowance = allowance;
+
+		  }
+		  getSalary() {
+		    return this.basicSalary+this.HRA + this.allowance
+		  }
+		}
+		const person1 = new Employese("Akshay", 2020, 100000, 20000, 12222)
+		const person1 = new Employese("Ajax", 2021, 123000, 23000, 12132)
+		
+		
+3)q03
+Bank Account (Object Oriented Programming in JavaScript)
+
+Create a class and define data members such as name, bank account number,
+account balance, account type, ifsc and name it as BankAccount.
+Create three Instances(three customers) of BankAccount with all necessary details.
+Print the name of customers and their account balances.
+Calculate the average account balance from all the instances.
+Solution:
+		class BankAccount{
+		  constructor(name, accountNumber, accountBalance, accountType,IFSC) {
+		    this.name = name;
+		    this.accountNumber = accountNumber;
+		    this.accountBalance = accountBalance;
+		    this.accountType = accountType;
+		    this.IFSC = IFSC;
+		    console.log(name);
+		    console.log(accountBalance);
+		  };
+
+		  averageAccountBalance() {
+		    return this.accountBalance
+		  }
+		}
+
+		const person1 = new BankAccount("Akshay", 2020, 100000, "savings", 12222)
+		const person2 = new BankAccount("Ajax", 2021, 123000, "savings", 12132)
+		const person3 = new BankAccount("Ajax", 2021, 123000, "savings", 12132)
+		console.log((person1.averageAccountBalance()+person2.averageAccountBalance()+person3.averageAccountBalance())/2);
+
 
 
