@@ -60,4 +60,29 @@ Solution:
           }
           console.log(sumOfAllDigits([3,5,2,9,4],[6,2,8,1,3]));
           
-6)          
+6)Find number of constants and vowels in a string.
+Solution:
+          const StringToUpperCase = (s) => {
+            let vowel = 0
+            let constant=0
+            let test = s.split("").map((ele) => (/^[aeiou]$/i).test(ele)?vowel=vowel+1:constant+=1)
+
+            return [vowel,constant]
+          }
+          console.log(StringToUpperCase("akshay"));
+          
+7)Shift an array by X to right.
+Example [1,2,3,4,5] after shifting to right [5,1,2,3,4]
+Solution:
+                    const StringToUpperCase = (nums, target) => {
+
+                      while (target) {
+                     nums.unshift(nums.pop())
+                        target--
+                      }
+                      return nums
+
+                    }
+                    console.log(StringToUpperCase([1,2,3,4,5],2));
+
+
