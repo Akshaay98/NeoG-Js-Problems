@@ -191,4 +191,60 @@ Solution:
 		console.log((person1.averageAccountBalance()+person2.averageAccountBalance()+person3.averageAccountBalance())/2);
 
 
+4)Given an array of objects of items in cart, print:
 
+the total No. of items
+the total cart value
+the total discounted value(sum of dicounted values on each item) based on the given discount
+total tax amount (18% tax, calculated on total cart value)
+const cartItems = [
+	{
+		id: "101",
+		name: "Oreo",
+		count: 2,
+		price: 30.0,
+		discount: 0.18
+	},
+	{
+		id: "102",
+		name: "Red Bull",
+		count: 1,
+		price: 99.0,
+		discount: 0.15
+	},
+	{
+		id: "103",
+		name: "Dairy Milk Silk",
+		count: 3,
+		price: 175.0,
+		discount: 0.05
+	},
+	{
+		id: "104",
+		name: "Pulse Candy Pack",
+		count: 1,
+		price: 135.0,
+		discount: 0.2
+	}
+];
+
+SOlution:
+		1)const oops = (cartItems) => {
+		  return cartItems.length
+		}
+		console.log(oops(cartItems));
+		
+		2) const oops = (cartItems) => {
+		 return cartItems.reduce((acc,ele)=>acc+ele.price,1)
+		}
+		console.log(oops(cartItems));
+		
+		3)const oops = (cartItems) => {
+		  return cartItems.reduce((acc,ele)=>acc+ele.discount*ele.price,1)
+		}
+		console.log(oops(cartItems));	
+		
+		4)const oops = (cartItems) => {
+		  return cartItems.reduce((acc,ele)=>acc+0.18*ele.price,1)
+		}
+		console.log(oops(cartItems));		
