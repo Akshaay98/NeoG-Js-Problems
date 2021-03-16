@@ -1,0 +1,84 @@
+1)Find the sum of two matrix.
+Solution:
+          const sumOfTwoMatries = (nums1, nums2) => {
+          let result = []
+          let i = 0;
+          let j=0
+          while(i<nums1.length && j<nums2.length){
+          let subResult=[]
+          for (k = 0; k < nums1[i].length && k <nums2[j].length; k++)
+          {
+          subResult.push( nums1[i][k] + nums2[j][k])
+           }
+            result.push(subResult)
+            i++
+            j++
+          }
+          return result
+        }
+
+        console.log(
+          sumOfTwoMatries([
+            [1, 0, 1],
+            [4, 5, 6],
+            [1, 2, 3],
+          ],
+          [
+            [1, 1, 1],
+            [2, 3, 1],
+            [1, 5, 1],
+          ])
+        );
+
+          
+2) Display transpose of matrix. Explaination https://www.varsitytutors.com/linear_algebra-help/the-transpose      
+Solution:
+          const transposeOfMatrix = (nums) => {
+            let result = []
+            let col=0
+            while (col < nums.length) {
+              let subResult = []
+              for (i = 0; i < nums[col].length; i++){
+                subResult.push(nums[i][col])
+
+              }
+              result.push(subResult)
+              col++
+            }
+            return result
+          }
+
+          console.log(
+            transposeOfMatrix([
+              [1,2,3],
+              [1,2,3],
+              [1,2,3],
+          ])
+          );
+
+3)Find Identity matrix. Explanation https://www.varsitytutors.com/hotmath/hotmath_help/topics/identity-matrix
+Solution:
+          const transposeOfMatrix = (nums) => {
+            for (i = 0; i < nums.length; i++){
+              for (j = 0; j < nums[i].length; j++){
+                if (i == j && nums[i][j] !== 1)
+                {
+                  return false
+                }
+                else if (i != j && nums[i][j] != 0)
+                {
+                  return false
+                  }
+              }
+            }
+            return true
+          };
+
+          console.log(
+            transposeOfMatrix([
+              [1,0,0] ,[0,1,0],[0,0,1]
+            ])
+          );
+          // [
+          //   [1,1,1],[2,2,2],[3,3,3],
+          // ]
